@@ -320,238 +320,52 @@ progress {
   cursor: default;
 }
 
-.p-open {
-  position: relative;
+.l-header {
+  height: 100px;
 }
-.p-open.none {
-  -webkit-animation: sk-none 3s linear 6s forwards;
-          animation: sk-none 3s linear 6s forwards;
+
+.l-sidebar {
+  position: absolute;
+  top: 100px;
+  right: -200px;
+  width: 200px;
 }
-@-webkit-keyframes sk-none {
-  0% {
-    background-color: red;
-  }
-  100% {
-    display: none;
-    background-color: blue;
-  }
+
+.c-notDot {
+  list-style: none;
 }
-@keyframes sk-none {
-  0% {
-    background-color: red;
-  }
-  100% {
-    display: none;
-    background-color: blue;
-  }
-}
-.p-open__box {
+
+.p-header {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  justify-content: flex-end;
 }
-.p-open__box__top {
+.p-header__nav {
+  display: flex;
+}
+.p-header__nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 150px;
+  color: black;
+}
+.p-header__nav__list:hover {
+  background-color: blue;
+}
+
+.p-top {
+  height: 1000px;
   background-color: black;
-  height: calc(50% - 0.5px);
-  box-shadow: inset 0px -10px 20px -10px white;
 }
-.p-open__box__top.open {
-  -webkit-animation: sk-shake1 0.1s ease-in-out, sk-shake1 0.1s ease-in-out 0.1s, sk-shake1 0.1s ease-in-out 0.2s, sk-shake1 0.1s ease-in-out 0.3s, sk-shake1 0.1s ease-in-out 0.4s, sk-shake1 0.1s ease-in-out 0.5s, sk-open-top 6s ease-in 0.6s forwards;
-          animation: sk-shake1 0.1s ease-in-out, sk-shake1 0.1s ease-in-out 0.1s, sk-shake1 0.1s ease-in-out 0.2s, sk-shake1 0.1s ease-in-out 0.3s, sk-shake1 0.1s ease-in-out 0.4s, sk-shake1 0.1s ease-in-out 0.5s, sk-open-top 6s ease-in 0.6s forwards;
+
+.p-logo {
+  display: flex;
+  align-items: center;
 }
-@-webkit-keyframes sk-shake1 {
-  0% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  20% {
-    transform: translate(2px, 2px) rotateZ(1deg);
-  }
-  40% {
-    transform: translate(0px, 2px) rotateZ(0deg);
-  }
-  60% {
-    transform: translate(2px, 0px) rotateZ(-1deg);
-  }
-  80% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  100% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-}
-@keyframes sk-shake1 {
-  0% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  20% {
-    transform: translate(2px, 2px) rotateZ(1deg);
-  }
-  40% {
-    transform: translate(0px, 2px) rotateZ(0deg);
-  }
-  60% {
-    transform: translate(2px, 0px) rotateZ(-1deg);
-  }
-  80% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  100% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-}
-@-webkit-keyframes sk-open-top {
-  0% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  20% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  100% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(-90deg);
-  }
-}
-@keyframes sk-open-top {
-  0% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  20% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  100% {
-    transform-origin: top;
-    transform: perspective(1500px) rotateX(-90deg);
-  }
-}
-.p-open__box__bottom {
-  background-color: black;
-  height: calc(50% - 0.5px);
-  box-shadow: inset 0px 10px 20px -10px white;
-}
-.p-open__box__bottom.open {
-  -webkit-animation: sk-shake2 0.1s ease-in-out, sk-shake2 0.1s ease-in-out 0.1s, sk-shake2 0.1s ease-in-out 0.2s, sk-shake2 0.1s ease-in-out 0.3s, sk-shake2 0.1s ease-in-out 0.4s, sk-shake2 0.1s ease-in-out 0.5s, sk-open-bottom 6s ease-in 0.6s forwards;
-          animation: sk-shake2 0.1s ease-in-out, sk-shake2 0.1s ease-in-out 0.1s, sk-shake2 0.1s ease-in-out 0.2s, sk-shake2 0.1s ease-in-out 0.3s, sk-shake2 0.1s ease-in-out 0.4s, sk-shake2 0.1s ease-in-out 0.5s, sk-open-bottom 6s ease-in 0.6s forwards;
-}
-@-webkit-keyframes sk-shake2 {
-  0% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  20% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  40% {
-    transform: translate(2px, 2px) rotateZ(1deg);
-  }
-  60% {
-    transform: translate(0px, 2px) rotateZ(0deg);
-  }
-  80% {
-    transform: translate(2px, 0px) rotateZ(-1deg);
-  }
-  100% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-}
-@keyframes sk-shake2 {
-  0% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  20% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-  40% {
-    transform: translate(2px, 2px) rotateZ(1deg);
-  }
-  60% {
-    transform: translate(0px, 2px) rotateZ(0deg);
-  }
-  80% {
-    transform: translate(2px, 0px) rotateZ(-1deg);
-  }
-  100% {
-    transform: translate(0px, 0px) rotateZ(0deg);
-  }
-}
-@-webkit-keyframes sk-open-bottom {
-  0% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  20% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  100% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(90deg);
-  }
-}
-@keyframes sk-open-bottom {
-  0% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  20% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(0deg);
-  }
-  100% {
-    transform-origin: bottom;
-    transform: perspective(1500px) rotateX(90deg);
-  }
-}
-.p-open__intro {
+.p-logo__img {
   position: absolute;
-  width: 100%;
-  text-align: center;
-  top: calc(50% - 100px);
-  color: white;
-}
-.p-open__hole {
-  position: absolute;
-  left: calc(50% - 15px);
-  top: calc(50% - 31px);
-  width: 30px;
-  height: 53px;
-}
-.p-open__hole--circle {
-  position: absolute;
-  left: calc(50% - 15px);
-  bottom: calc(50% - 2px);
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 0px 20px 4px white;
-}
-.p-open__hole--trapezoid {
-  position: absolute;
-  left: calc(50% - 10px);
-  top: calc(50% - 5px);
-  width: 20px;
-  height: 30px;
-  border-bottom: 30px solid white;
-  border-left: 5px solid transparent;
-  /* 左側下辺の伸び */
-  border-right: 5px solid transparent;
-  /* 右側下辺の伸び */
-  box-sizing: border-box;
-  filter: drop-shadow(0px 0px 10px white);
-}
-.p-open__key {
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  z-index: 100;
-  background-color: white;
-  cursor: pointer;
+  left: 2vw;
 }
 
 /* Foundation
